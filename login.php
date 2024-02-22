@@ -1,12 +1,12 @@
 <?php
+ob_start();
 session_start();
 
 $title = 'HealthyRabbits - Connexion';
 include('views/partials/head.php');
-include(__DIR__ . "/variable.php");
+require_once(__DIR__ . "/variable.php");
 
 $error = '';
-$success = '';
 $email = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -16,20 +16,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $loginSuccessful = false;
 
     foreach ($users as $user) {
-        if ($user['email'] === $enteredEmail && $user['password'] === $enteredPassword) {
+        if ($user['email'] === $enteredEmail && $user['password'] === $enteredPassword) { // Considérer password_verify ici
+            $_SESSION['user_email'] = $enteredEmail;
             $loginSuccessful = true;
             break;
         }
     }
 
     if ($loginSuccessful) {
-        $success = 'Vous avez été connecté avec succès!';
         header('Location: /');
-        exit; 
+        exit;
     } else {
         $error = 'E-mail ou mot de passe invalide';
     }
 }
+
 ?>
 
 <div class="container login">
@@ -40,18 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     Connectez-vous !
                 </div>
                 <div class="card-body">
-                    <?php if ($error !== ''): ?>
-                        <div class="alert alert-danger" role="alert">
-                            <?php echo $error; ?>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if ($success !== ''): ?>
-                        <div class="alert alert-success" role="alert">
-                            <?php echo $success; ?>
-                        </div>
-                    <?php endif; ?>
-
                     <form method="POST">
                         <div class="form-group">
                             <label for="email">E-mail:</label>
