@@ -10,16 +10,54 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/cipthayasa" rel="stylesheet">
     <title>
         <?php if (isset($title)) {
             echo $title;
         } ?>
     </title>
+    <style>
+        body {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .navbar-brand:hover {
+            animation: shining 1s infinite;
+        }
+
+        @keyframes shining {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            transition: 0.5s ease-in;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-light" id="nav1">
-        <a href="/"><img src="/img/logo.png" height="100" class="navbar-brand"></a>
+        <a href="/"><img src="/img/logo.png" height="100" class="navbar-brand logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,10 +85,11 @@
             </ul>
         </div>
         <?php if (isset($_SESSION['user_email'])): ?>
-    <a class="hvr-grow" href="logout"><img src="/img/logout.png" height="50" class="navbar-brand" id="logout"></a>
-<?php else: ?>
-    <a class="hvr-grow" href="login"><img src="/img/login.png" height="50" class="navbar-brand" id="login"></a>
-    <a class="hvr-grow" href="register"><img src="/img/register.png" height="50" class="navbar-brand" id="register"></a>
-<?php endif; ?>
-        
+            <a class="hvr-grow" href="logout"><img src="/img/logout.png" height="40" class="navbar-brand" id="logout"></a>
+        <?php else: ?>
+            <a class="hvr-grow" href="login"><img src="/img/login.png" height="40" class="navbar-brand" id="login"></a>
+            <a class="hvr-grow" href="register"><img src="/img/register.png" height="40" class="navbar-brand"
+                    id="register"></a>
+        <?php endif; ?>
+
     </nav>

@@ -6,6 +6,7 @@ $routes = [
     '/' => '/home.php',
     '/accessories' => '/accessories.php',
     '/contact' => '/contact.php',
+    '/contactValide' => '/contactValide.php',
     '/toys' => '/toys.php',
     '/food' => '/food.php',
     '/about' => '/about.php',
