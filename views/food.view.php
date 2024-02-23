@@ -25,6 +25,7 @@
                 "Tout spécialement adaptés aux besoins de votre lapin, ces extrudés offrent à votre animal une alimentation saine et équilibrée qu'il ne peut pas trier. Répondant en cela aux exigences nutritionnelles des lapins.
                 "
             ];
+
             for ($i = 0; $i < count($productNames); $i++)
             ?>
             <?php for ($i = 0; $i < count($productDesc); $i++) {
@@ -35,7 +36,6 @@
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $productNames[$i]; ?></h5>
                             <p class="card-text"><?php echo $productDesc[$i]; ?></p>
-                            <p class="card-price">$<?php echo $productPrices[$i]; ?></p>
                             <a href="#" class="btn btn-success">Buy Now</a>
                         </div>
                     </div>
