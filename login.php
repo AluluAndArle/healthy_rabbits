@@ -15,18 +15,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $loginSuccessful = false;
 
-foreach ($users as $user) {
-    if ($user['email'] === $enteredEmail && $user['password'] === $enteredPassword) {
-        $_SESSION['user_email'] = $enteredEmail;
-        $loginSuccessful = true;
-        break;
+    foreach ($users as $user) {
+        if ($user['email'] === $enteredEmail && $user['password'] === $enteredPassword) {
+            $_SESSION['user_email'] = $enteredEmail;
+            $loginSuccessful = true;
+            break;
+        }
     }
-}
 
-if (!$loginSuccessful) {
-    echo '<div class="alert alert-danger">E-mail ou mot de passe invalide.</div>';
-    exit;
-}
+    if (!$loginSuccessful) {
+        echo '<div class="alert alert-danger">E-mail ou mot de passe invalide.</div>';
+        exit;
+    }
 
     if ($loginSuccessful) {
         header('Location: /');
@@ -38,4 +38,6 @@ if (!$loginSuccessful) {
 
 ?>
 
-<?php require_once(__DIR__ . "/views/login.view.php") ?>
+<?php require_once(__DIR__ . "/views/login.view.php");
+include('views/partials/footer.php');
+?>
