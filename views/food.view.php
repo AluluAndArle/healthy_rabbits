@@ -31,10 +31,11 @@
             ?>
                 <div class="col-md-4 mb-4 hvr-grow">
                     <div class="card">
-                        <img src="/img/item<?php echo $i + 1; ?>.webp" class="card-img-top" alt="Product <?php echo $i + 1; ?>">
+                        <img src="/img/item<?php echo $i + 1; ?>.webp" class="card-img-top borderImg" alt="Product <?php echo $i + 1; ?>">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $productNames[$i]; ?></h5>
                             <p class="card-text"><?php echo $productDesc[$i]; ?></p>
+                            <p class="card-price">$<?php echo $productPrices[$i]; ?></p>
                             <a href="#" class="btn btn-success">Buy Now</a>
                         </div>
                     </div>
