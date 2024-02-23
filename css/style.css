@@ -27,6 +27,11 @@ h1 {
   font-size: 65px;
 }
 
+.spaceee{
+  margin-top:40px;
+  padding-bottom:90px;
+}
+
 .btn {
   border-radius: 25px 25px 25px 25px;
   text-shadow: 1px 1px 6px black;
@@ -58,6 +63,11 @@ input {
 
 .promo-img {
   z-index: 2;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
 }
 
 .buy-button {
@@ -138,12 +148,17 @@ nav ul a:hover {
   border-bottom: solid 2px white;
 }
 
+
 footer ul a {
   transition: 0.3s ease-in;
 }
 
 footer ul a:hover {
   border-bottom: solid 1px white;
+}
+
+.colorr:hover{
+  color:#666103;
 }
 
 .btn-card:hover {
@@ -153,3 +168,22 @@ a.btn-card {
   text-decoration: none;
   color: #fff;
 }
+
+.box{
+  padding:60px 0px;
+}
+
+.box-part{
+  background:#FFF;
+  border-radius:0;
+  padding:60px 10px;
+  margin:30px 0px;
+}
+.text{
+  margin:20px 0px;
+}
+
+.fa{
+   color:#4183D7;
+}
+

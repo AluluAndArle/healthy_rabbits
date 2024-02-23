@@ -1,4 +1,4 @@
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 bg-footer border-top fixed-bottom">
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 bg-footer border-top fixed-bottom ">
   <p class="col-md-4 mb-0 text-light">© 2024 Healthy Rabbits Company, Inc par LePoleS.</p>
 
   <div
