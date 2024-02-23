@@ -2,8 +2,10 @@
     <div class="row">
         <div class="col-md-6 offset-md-3 text-center">
             <div class="card">
-                <div class="card-body">
+                <div class="card-header">
                     <h2>Contact</h2>
+                </div>
+                <div class="card-body">
                     <form action="contactValide" method="POST">
                         <div class="form-group">
                             <label for="Pseudo">Pseudo</label>

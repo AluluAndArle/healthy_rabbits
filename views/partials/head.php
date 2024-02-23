@@ -19,6 +19,12 @@
     <style>
         body {
             animation: fadeIn 1s ease-in-out;
+            background-image: url("/img/background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            user-select: none;
         }
 
         @keyframes fadeIn {
@@ -52,11 +58,15 @@
         .logo {
             transition: 0.5s ease-in;
         }
+
+        #nav1 {
+            background: rgba(255, 255, 255, 0.6);
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light" id="nav1">
+    <nav class="navbar navbar-expand-lg" id="nav1">
         <a href="/"><img src="/img/logo.png" height="100" class="navbar-brand logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,22 +75,22 @@
         <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link hvr-grow" href="/">Accueil</a>
+                    <a class="nav-link hvr-grow text-light" href="/">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-grow" href="food">Alimentation</a>
+                    <a class="nav-link hvr-grow text-light" href="food">Alimentation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-grow" href="toys">Jouets</a>
+                    <a class="nav-link hvr-grow text-light" href="toys">Jouets</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-grow" href="accessories">Accessoires</a>
+                    <a class="nav-link hvr-grow text-light" href="accessories">Accessoires</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-grow" href="contact">Contact</a>
+                    <a class="nav-link hvr-grow text-light" href="contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-grow" href="about">A Propos</a>
+                    <a class="nav-link hvr-grow text-light" href="about">A Propos</a>
                 </li>
             </ul>
         </div>
